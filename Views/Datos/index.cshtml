@@ -1,0 +1,26 @@
+@model Datos
+<div class="text-center">
+    <h1 class="display-4">Formulario de Ventas</h1>
+    
+  
+</div>
+<form asp-controller="Datos" asp-action="MiMetodoExecute" method="POST" style="margin-left: 30%; margin-right:30%;">
+
+     <label asp-for="DatosdeProducto" class="control-label"></label>
+     <input asp-for="DatosdeProducto" class="form-control" />
+
+     <label asp-for="Nombre" class="control-label"></label>
+     <input asp-for="Nombre" class="form-control" />
+
+     <label asp-for="Cantidad" class="control-label"></label>
+     <input asp-for="Cantidad" class="form-control" />
+
+     <label asp-for="Precio" class="control-label"></label>
+     <input asp-for="Precio" class="form-control" />
+
+
+    <div class="form-group" style="margin-top: 5%;">
+        <button  type="submit" class="btn btn-warning" style="width: 100%;">Calcular</button> 
+    </div>              
+</form>
+<h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;">@ViewData["Message"]</h1>
